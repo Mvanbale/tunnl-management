@@ -8,16 +8,25 @@ html, body, #app, .container {
 html {
     overflow-x: hidden;
 }
+a {
+	line-height: 44px;
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	perspective: 1000px;
+}
+
+
 
 .logo{
+
   width:4em;
   position: absolute;
   top: 5px;
   right: 20px;
 }
-.saturate {-webkit-filter: saturate(3); filter: saturate(3);}
+
 .header {
-	border-bottom: 3px #ececec solid;
+	border-bottom: 3px #1a1a1a solid;
 	top:0;
 	width:100%;
     margin-bottom: 20px;
@@ -36,6 +45,7 @@ html {
     height: 100%;
     float: left;
     padding: 20px;
+    background-color:#cccccc;
     overflow: auto;
 }
 
@@ -55,7 +65,7 @@ html {
     height: 65px;
 }
 .sidenav > li.sidenav-title > a {
-    background: black;
+    background: ;
     font-size: 18px;
     line-height: 60px;
 }
@@ -68,14 +78,14 @@ html {
 }
 
 .dashboard-button-previous, .dashboard-button-previous:hover {
-    background-color: black;
+    background-color: ;
     border: 1px solid #BEBEBE;
     float: left;
     width: 80px;
 }
 
 .dashboard-button-next, .dashboard-button-next:hover {
-    background-color: black;
+    background-color: #333333;
     border: 1px solid #BEBEBE;
     float: right;
     width: 80px;
@@ -86,7 +96,7 @@ html {
     padding: 20px !important;
     margin: 0;
     height: 100%;
-    background-color: black;
+    background-color: #1a1a1a;
     color: #d1d1d1;
     font-size: 21px;
     font-weight: 600;
@@ -196,7 +206,7 @@ html {
     border-radius: 6px;
     box-shadow: 0 1px 1px #CCCCCC;
     border-spacing: 0;
-    color: black;
+    color: #333333;
 }
 
 .dashboard-table thead {
@@ -207,10 +217,10 @@ html {
 }
 
 .dashboard-table thead th {
-    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, black), color-stop(1, black) );
-    background:-moz-linear-gradient(center top , black, black);
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='black', endColorstr='black');
-    background-image: linear-gradient(center top , black, black);
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #333333), color-stop(1, #333333) );
+    background:-moz-linear-gradient(center top , #333333, #333333);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#333333');
+    background-image: linear-gradient(center top , #333333, #333333);
     background-color: #cccccc;
     border-left: 1px solid #BEBEBE;
     text-align: left;
@@ -264,5 +274,5 @@ html {
     -ms-transition: all 0.30s ease-in-out;
     -o-transition: all 0.30s ease-in-out;
     outline: none;
-    color: black;
+    color: ;
 }
