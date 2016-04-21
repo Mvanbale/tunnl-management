@@ -71,9 +71,9 @@ export default class StreamComponent extends React.Component {
                 </thead>
                 <tbody>
                     {streams.length === 0 ? 'No results found.' : streams.map((stream) => {
-                      return <tr className= 'stream' key = {stream.name + stream.quantity}>
-                          <td>{stream.name}</td>
-                          <td><Link streamName = {stream.name} to={`/watch/${stream.name}`}><span>Visit the stream!</span></Link></td>
+                      return <tr className= 'stream' key = {stream}>
+                          <td>{stream}</td>
+                          <td><Link streamName = {stream} to={`/watch/${stream}`}><span>Visit the stream!</span></Link></td>
                       </tr>;
                     }
                     )}

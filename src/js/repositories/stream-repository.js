@@ -9,8 +9,7 @@ const streamRepository = {
       $.get(config.tunnelServerIP + '/getStreams')
         .promise()
         .done((response) => {
-          var arr = Object.keys(response).map(function (key) {return response[key] });
-          resolve(arr);
+          resolve(response);
         });
     });
   }
