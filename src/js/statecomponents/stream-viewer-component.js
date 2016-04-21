@@ -69,14 +69,13 @@ export default class StreamComponent extends React.Component {
       self.sourceBuffer.addEventListener('updateend', function (_) {
         self.mediaSource.endOfStream();
         document.getElementById("video").play();
-        self.fetchAB(self.assetURL, self.resultCallBack.bind(self));
       });
 
       self.sourceBuffer.addEventListener('error', function (_) {
         console.log(_);
       })
 
-      self.fetchAB(self.assetURL, self.resultCallBack.bind(self));
+      setInterval(function () { self.fetchAB(self.assetURL, self.resultCallBack.bind(self)); }, 200);
     }
 
 
@@ -90,12 +89,14 @@ export default class StreamComponent extends React.Component {
   fetchAB(url, cb) {
     var xhr = new XMLHttpRequest;
     xhr.open('get', url + this.counter);
-    this.counter++;
+
     xhr.responseType = 'arraybuffer';
     xhr.onload = function () {
-      if (xhr.status == 200)
+      if (xhr.status == 200) {
+        this.counter++;
         cb(xhr.response);
-    };
+      }
+    }.bind(this);
     xhr.send();
   };
 
