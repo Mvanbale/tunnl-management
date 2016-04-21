@@ -3,6 +3,7 @@ import TextInput from './text-input.js';
 import filter from '../util/filter.js';
 import {debounce} from 'throttle-debounce';
 import { Link } from 'react-router';
+var config = require('../../../config.json');
 const streamRepository = require('../repositories/stream-repository');
 
 
@@ -15,7 +16,7 @@ export default class StreamComponent extends React.Component {
     this.counter = 0;
     this.sourceBuffer;
     this.mediaSource;
-    this.assetURL = `http://localhost:3000/${this.props.params.name}/getsegment/`;
+    this.assetURL = `${config.tunnelServerIP}/${this.props.params.name}/getsegment/`;
     this.mimeCodec = 'video/webm;codecs=vp8';
   }
 
